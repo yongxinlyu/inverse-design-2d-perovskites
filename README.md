@@ -1,15 +1,25 @@
-# DJ perovskite
+## Inverse Design of 2D Hybrid Perovskites
 
-**Project structure**
+This repository contains the code and data supporting the manuscript:
+
+“Fingerprinting Organic Molecules for the Inverse Design of Two-Dimensional Hybrid Perovskites with Target Energetics”
+(submitted to Science Advances)
+
+The workflow integrates molecular fingerprinting, high-throughput first-principles data, interpretable machine learning, and synthesis feasibility screening to enable inverse design of Dion–Jacobson (DJ) phase two-dimensional hybrid perovskites with targeted energy level alignment.
+
+### Repository Overview
+
+The repository implements the full inverse-design pipeline described in the manuscript, including:
+- Generation of invertible 12-digit molecular fingerprints
+- Expansion of chemical space via molecular morphing
+- Machine-learning prediction of HOMO/LUMO energy levels
+- Screening for synthetic accessibility and 2D formability
+- Identification of candidate organic spacers with Type Ib, IIa, and IIb energy level alignment
+
+### Directory Structure
 ```
-├── README.md         
-├── 01-rawdata/
-│   ├── 01-molecular-morphing/     
-│   ├── 02-organic-repository/        
-│   ├── 03-gaussian-organic-xyz/
-│   ├── 04-mo-set/  
-│   └── raw            
-│
+├── README.md     
+│    
 ├── 02-metadata/   
 │   ├── 01-mo-energetics/       
 │   ├── 02-organic-dimension/        
@@ -19,85 +29,35 @@
 │   └── 06-csv-files/
 │
 ├── 03-code/
-│   ├── energy_level_alignment.py
-│   ├── hybrid_perovskite.py
-│   ├── machine_learning.py
-│   ├── organic_molecule.py
-│   ├── smiles_to_image.py
-│   └── variables.py
+│   ├── molecular_morphing_helper.py
+│   ├── organic_featurization_helper.py
+│   ├── perovskite_featurization_helper.py
+│   ├── model_training_helper.py
+    ├── ...
+│   └── utils.py
 │
-├── 04-notebooks/
-│   ├── 01-molecular-morphing.ipynb   <- perform morphing, get  
-│   ├── 02-organic-molecule.ipynb 
-│   ├── 03-chemical-space.ipynb
-│   ├── 04-perovskite-structure.ipynb
-│   ├── 05-energy-level-alignment.ipynb
-│   └── 06-csv-files/
-│
-├── 05-figures/
+└── 04-notebooks/
+    ├── 01-molecular-morphing.ipynb 
+    ├── 02-organic-energy-level.ipynb 
+    ├── 04-build-perovskite.ipynb
+    ├── 05-perovskite-featurization.ipynb
+    ├── 06-machine-learning.ipynb
+    ├── ...
+    └── 21-final-candidates-visualization.ipynb
+
 
 ```
 
-* project structure: 
-    * notebooks
-        * morphing, write vasp input
-    * data
-        * rawdata: mo-set, relax-set, refine-set, hse-set
-        * metadata: mo-energetics, structure-info, hse-frontier
-    * code
-    * presentations
-    * figure
-    * manuscript
+### Contact Information
 
-
-This readme file was generated on 2024-04-14 by Yongxin Lyu
-
-## General Information
-
-### Title of Dataset: DJ perovskite repository
-
-<provide at least two contacts>
-
-- Author/Principal Investigator Information
+- Principal Investigator Information
     - Name: Tom Wu
-    - ORCID:
-    - Institution: University of New South Wales 
-    - Address:
-    - Email: tom.wu@unsw.edu.au
+    - Institution: The Hong Kong Polytechnic University 
+    - Email: tom-tao.wu@polyu.edu.hk
 
-- Author/Researcher Information
+- First Author Information
     - Name: Yongxin Lyu
-    - ORCID: 
     - Institution: University of New South Wales
-    - Address:
     - Email: yongxin.lyu@unsw.edu.au
 
-## Sharing & Access Information
-
-- Licenses/restrictions placed on the data:
-- Links to publications that cite or use the data:
-
-## Data & File Overview
-
-- File list:
-- Relationships between files
-
-
-## Methodological Information
-
-- Description of methods used for collection/generation of data:
-
-- Methods for processing the data:
-
-- Software specific information needed to interpret the data:
-
-
-## Data specific information for: [Filename]
-
-- Name of variables:
-- variable list: list variable name, descriptions, and value labels
-
-- Specialized formats or other abbreviations used:
-
-
-
+This readme file was generated on 2026-01-18 by Yongxin Lyu
