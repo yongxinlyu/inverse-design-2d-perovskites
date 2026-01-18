@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+
+# Conda
+.env
+.venv
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+**/archive/
+**/.DS_Store
+**/packing.tar.gz
+.vscode/
+rawfigures/
+01-rawdata/
+01-rawdata/01-molecular-generation/
+01-rawdata/02-organic-repository/
+01-rawdata/04-mo-set/
+01-rawdata/07-relax-set/
+01-rawdata/08-refine-set/
+01-rawdata/09-hse-set/
+
+01-rawdata/15-pubchem-existence/
+01-rawdata/17-partial-charge/
+02-metadata/06-csv-files/12-synthesis-feasibility.csv
+02-metadata/06-csv-files/13-forward-design.csv
+02-metadata/06-csv-files/G0-G6-dataframe.csv
+05-figures/
+06-slides/
+07-manuscript/
